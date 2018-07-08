@@ -39,9 +39,10 @@
 
 <h1>ICache<'TKey, 'TValue></h1>
 <p>
-  <span>Namespace: FSharp.Data.Runtime</span><br />
-  <span>Parent Module: <a href="fsharp-data-runtime-caching.html">Caching</a></span>
-</p>
+
+    <span>Namespace: FSharp.Data.Runtime</span><br />
+        <span>Parent Module: <a href="fsharp-data-runtime-caching.html">Caching</a></span><br />
+    </p>
 <div class="xmldoc">
 </div>
   <h3>Instance members</h3>
@@ -53,35 +54,16 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '426', 426)" onmouseover="showTip(event, '426', 426)">
-            GetOrAdd(key, valueFactory)
-          </code>
-          <div class="tip" id="426">
-            <strong>Signature:</strong> (key:&#39;TKey * valueFactory:(unit -&gt; &#39;TValue)) -&gt; &#39;TValue<br />
-              <strong>Modifiers:</strong> abstract<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/Caching.fs#L15-15" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '427', 427)" onmouseover="showTip(event, '427', 427)">
+          <code onmouseout="hideTip(event, '489', 489)" onmouseover="showTip(event, '489', 489)">
             Remove(key)
           </code>
-          <div class="tip" id="427">
+          <div class="tip" id="489">
             <strong>Signature:</strong> key:&#39;TKey -&gt; unit<br />
               <strong>Modifiers:</strong> abstract<br />
-                      </div>
+                                  </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/Caching.fs#L16-16" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/Caching.fs#L15-15" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -91,16 +73,16 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '428', 428)" onmouseover="showTip(event, '428', 428)">
+          <code onmouseout="hideTip(event, '490', 490)" onmouseover="showTip(event, '490', 490)">
             Set(key, value)
           </code>
-          <div class="tip" id="428">
+          <div class="tip" id="490">
             <strong>Signature:</strong> (key:&#39;TKey * value:&#39;TValue) -&gt; unit<br />
               <strong>Modifiers:</strong> abstract<br />
-                      </div>
+                                  </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/Caching.fs#L14-14" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/Caching.fs#L13-13" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -110,16 +92,16 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '429', 429)" onmouseover="showTip(event, '429', 429)">
-            TryRetrieve(key)
+          <code onmouseout="hideTip(event, '491', 491)" onmouseover="showTip(event, '491', 491)">
+            TryRetrieve(key, extendCacheExpiration)
           </code>
-          <div class="tip" id="429">
-            <strong>Signature:</strong> key:&#39;TKey -&gt; &#39;TValue option<br />
+          <div class="tip" id="491">
+            <strong>Signature:</strong> (key:&#39;TKey * extendCacheExpiration:bool option) -&gt; &#39;TValue option<br />
               <strong>Modifiers:</strong> abstract<br />
-                      </div>
+                                  </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/Caching.fs#L13-13" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/Caching.fs#L14-14" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
