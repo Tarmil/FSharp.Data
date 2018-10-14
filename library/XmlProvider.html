@@ -811,6 +811,24 @@ is a terse summary mixing substitution groups with abstract recursive definition
 </table>
 <p>Substitution groups are like choices, and the type provider produces an optional
 property for each alternative.</p>
+<h3>Validation</h3>
+<p>The <code>GetSchema</code> method on the generated type returns an instance
+of <code>System.Xml.Schema.XmlSchemaSet</code> that can be used to validate documents:</p>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span onmouseout="hideTip(event, 'fs126', 283)" onmouseover="showTip(event, 'fs126', 283)" class="id">System</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs127', 284)" onmouseover="showTip(event, 'fs127', 284)" class="id">Xml</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs128', 285)" onmouseover="showTip(event, 'fs128', 285)" class="id">Schema</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs129', 286)" onmouseover="showTip(event, 'fs129', 286)" class="id">schema</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs89', 287)" onmouseover="showTip(event, 'fs89', 287)" class="rt">Person</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs130', 288)" onmouseover="showTip(event, 'fs130', 288)" class="id">GetSchema</span><span class="pn">(</span><span class="pn">)</span>
+<span onmouseout="hideTip(event, 'fs90', 289)" onmouseover="showTip(event, 'fs90', 289)" class="fn">turing</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs131', 290)" onmouseover="showTip(event, 'fs131', 290)" class="id">XElement</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs132', 291)" onmouseover="showTip(event, 'fs132', 291)" class="id">Document</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs133', 292)" onmouseover="showTip(event, 'fs133', 292)" class="id">Validate</span><span class="pn">(</span><span onmouseout="hideTip(event, 'fs129', 293)" onmouseover="showTip(event, 'fs129', 293)" class="id">schema</span><span class="pn">,</span> <span class="id">validationEventHandler</span> <span class="o">=</span> <span class="k">null</span><span class="pn">)</span>
+</code></pre></td>
+</tr>
+</table>
+<p>The <code>Validate</code> method accepts a callback to handle validation issues;
+passing <code>null</code> will turn validation errors into exceptions.
+There are overloads to allow other effects (for example setting default values
+by enabling the population of the XML tree with the post-schema-validation infoset;
+for details see the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.xml.schema.extensions.validate?view=netframework-4.7.2">documentation</a>).</p>
 <h3>Remarks on using a schema</h3>
 <p>The XML Type Provider supports most XSD features.
 Anyway the <a href="https://www.w3.org/XML/Schema">XML Schema</a> specification is rich and complex and also provides a
@@ -961,6 +979,14 @@ when a schema becomes available.</p>
 <div class="tip" id="fs123">XmlProvider&lt;...&gt;.Parse(text: string) : XmlProvider&lt;...&gt;.And<br /><em><br /><br />Parses the specified XSD string</em></div>
 <div class="tip" id="fs124">property XmlProvider&lt;...&gt;.And.Props: string []</div>
 <div class="tip" id="fs125">property XmlProvider&lt;...&gt;.And.Ands: XmlProvider&lt;...&gt;.And []</div>
+<div class="tip" id="fs126">namespace System</div>
+<div class="tip" id="fs127">namespace System.Xml</div>
+<div class="tip" id="fs128">namespace System.Xml.Schema</div>
+<div class="tip" id="fs129">val schema : XmlSchemaSet</div>
+<div class="tip" id="fs130">XmlProvider&lt;...&gt;.GetSchema() : XmlSchemaSet</div>
+<div class="tip" id="fs131">Runtime.BaseTypes.XmlElement.XElement: System.Xml.Linq.XElement</div>
+<div class="tip" id="fs132">property System.Xml.Linq.XObject.Document: System.Xml.Linq.XDocument</div>
+<div class="tip" id="fs133">(extension) System.Xml.Linq.XDocument.Validate(schemas: XmlSchemaSet, validationEventHandler: ValidationEventHandler) : unit<br />(extension) System.Xml.Linq.XDocument.Validate(schemas: XmlSchemaSet, validationEventHandler: ValidationEventHandler, addSchemaInfo: bool) : unit</div>
 
         </div>
         <div class="span3">

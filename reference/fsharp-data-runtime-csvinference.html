@@ -58,14 +58,14 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '224', 224)" onmouseover="showTip(event, '224', 224)">
-            InferColumnTypes(...)
+            x.InferColumnTypes(...)
           </code>
           <div class="tip" id="224">
             <strong>Signature:</strong> (inferRows:int * missingValues:string [] * cultureInfo:CultureInfo * schema:string * assumeMissingValues:bool * preferOptionals:bool * unitsOfMeasureProvider:IUnitsOfMeasureProvider option) -&gt; PrimitiveInferedProperty list<br />
                                   </div>
         </td>
         <td class="xmldoc">
-                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/Csv/CsvInference.fs#L329-329" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/Csv/CsvInference.fs#L332-332" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -74,7 +74,7 @@ Parameters:
 <em> inferRows - Number of rows to use for inference. If this is zero, all rows are used
 </em> missingValues - The set of strings recogized as missing values
 <em> cultureInfo - The culture used for parsing numbers and dates
-</em> schema - Optional column types, in a comma separated list. Valid types are "int", "int64", "bool", "float", "decimal", "date", "guid", "string", "int?", "int64?", "bool?", "float?", "decimal?", "date?", "guid?", "int option", "int64 option", "bool option", "float option", "decimal option", "date option", "guid option" and "string option". You can also specify a unit and the name of the column like this: Name (type&lt;unit&gt;). You can also override only the name. If you don't want to specify all the columns, you can specify by name like this: 'ColumnName=type'
+</em> schema - Optional column types, in a comma separated list. Valid types are "int", "int64", "bool", "float", "decimal", "date", "timespan", "guid", "string", "int?", "int64?", "bool?", "float?", "decimal?", "date?", "guid?", "int option", "int64 option", "bool option", "float option", "decimal option", "date option", "guid option" and "string option". You can also specify a unit and the name of the column like this: Name (type&lt;unit&gt;). You can also override only the name. If you don't want to specify all the columns, you can specify by name like this: 'ColumnName=type'
 <em> assumeMissingValues - Assumes all columns can have missing values
 </em> preferOptionals - when set to true, inference will prefer to use the option type instead of nullable types, double.NaN or "" for missing values
 * unitsOfMeasureProvider - optional function to resolve Units of Measure</p>

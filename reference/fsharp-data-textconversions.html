@@ -43,7 +43,7 @@
     <span>Namespace: FSharp.Data</span><br />
     </p>
 <div class="xmldoc">
-<p>Conversions from string to string/int/int64/decimal/float/boolean/datetime/guid options</p>
+<p>Conversions from string to string/int/int64/decimal/float/boolean/datetime/timespan/guid options</p>
 
 </div>
   <h3>Static members</h3>
@@ -55,15 +55,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '467', 467)" onmouseover="showTip(event, '467', 467)">
-            AsBoolean(text)
+          <code onmouseout="hideTip(event, '473', 473)" onmouseover="showTip(event, '473', 473)">
+            TextConversions.AsBoolean(text)
           </code>
-          <div class="tip" id="467">
+          <div class="tip" id="473">
             <strong>Signature:</strong> text:string -&gt; bool option<br />
                                   </div>
         </td>
         <td class="xmldoc">
-                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L75-75" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L82-82" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -73,15 +73,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '468', 468)" onmouseover="showTip(event, '468', 468)">
-            AsDateTime(cultureInfo text)
+          <code onmouseout="hideTip(event, '474', 474)" onmouseover="showTip(event, '474', 474)">
+            TextConversions.AsDateTime(...)
           </code>
-          <div class="tip" id="468">
+          <div class="tip" id="474">
             <strong>Signature:</strong> cultureInfo:IFormatProvider -&gt; text:string -&gt; DateTime option<br />
                                   </div>
         </td>
         <td class="xmldoc">
-                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L84-84" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L91-91" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -95,15 +95,15 @@ along the lines of <code>2013-01-28T00:37Z</code></p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '469', 469)" onmouseover="showTip(event, '469', 469)">
-            AsDecimal(cultureInfo text)
+          <code onmouseout="hideTip(event, '475', 475)" onmouseover="showTip(event, '475', 475)">
+            TextConversions.AsDateTimeOffset(...)
           </code>
-          <div class="tip" id="469">
-            <strong>Signature:</strong> cultureInfo:IFormatProvider -&gt; text:string -&gt; decimal option<br />
+          <div class="tip" id="475">
+            <strong>Signature:</strong> cultureInfo:IFormatProvider -&gt; text:string -&gt; DateTimeOffset option<br />
                                   </div>
         </td>
         <td class="xmldoc">
-                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L64-64" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L105-105" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -113,15 +113,33 @@ along the lines of <code>2013-01-28T00:37Z</code></p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '470', 470)" onmouseover="showTip(event, '470', 470)">
-            AsFloat(...)
+          <code onmouseout="hideTip(event, '476', 476)" onmouseover="showTip(event, '476', 476)">
+            TextConversions.AsDecimal(...)
           </code>
-          <div class="tip" id="470">
+          <div class="tip" id="476">
+            <strong>Signature:</strong> cultureInfo:IFormatProvider -&gt; text:string -&gt; decimal option<br />
+                                  </div>
+        </td>
+        <td class="xmldoc">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L71-71" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '477', 477)" onmouseover="showTip(event, '477', 477)">
+            TextConversions.AsFloat(...)
+          </code>
+          <div class="tip" id="477">
             <strong>Signature:</strong> (missingValues:string []) -&gt; useNoneForMissingValues:bool -&gt; cultureInfo:IFormatProvider -&gt; text:string -&gt; float option<br />
                                   </div>
         </td>
         <td class="xmldoc">
-                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L68-68" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L75-75" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -133,15 +151,15 @@ along the lines of <code>2013-01-28T00:37Z</code></p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '471', 471)" onmouseover="showTip(event, '471', 471)">
-            AsGuid(text)
+          <code onmouseout="hideTip(event, '478', 478)" onmouseover="showTip(event, '478', 478)">
+            TextConversions.AsGuid(text)
           </code>
-          <div class="tip" id="471">
+          <div class="tip" id="478">
             <strong>Signature:</strong> text:string -&gt; Guid option<br />
                                   </div>
         </td>
         <td class="xmldoc">
-                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L103-103" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L141-141" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -151,15 +169,15 @@ along the lines of <code>2013-01-28T00:37Z</code></p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '472', 472)" onmouseover="showTip(event, '472', 472)">
-            AsInteger(cultureInfo text)
+          <code onmouseout="hideTip(event, '479', 479)" onmouseover="showTip(event, '479', 479)">
+            TextConversions.AsInteger(...)
           </code>
-          <div class="tip" id="472">
+          <div class="tip" id="479">
             <strong>Signature:</strong> cultureInfo:IFormatProvider -&gt; text:string -&gt; int option<br />
                                   </div>
         </td>
         <td class="xmldoc">
-                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L58-58" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L65-65" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -169,15 +187,15 @@ along the lines of <code>2013-01-28T00:37Z</code></p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '473', 473)" onmouseover="showTip(event, '473', 473)">
-            AsInteger64(cultureInfo text)
+          <code onmouseout="hideTip(event, '480', 480)" onmouseover="showTip(event, '480', 480)">
+            TextConversions.AsInteger64(...)
           </code>
-          <div class="tip" id="473">
+          <div class="tip" id="480">
             <strong>Signature:</strong> cultureInfo:IFormatProvider -&gt; text:string -&gt; int64 option<br />
                                   </div>
         </td>
         <td class="xmldoc">
-                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L61-61" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L68-68" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -187,15 +205,15 @@ along the lines of <code>2013-01-28T00:37Z</code></p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '474', 474)" onmouseover="showTip(event, '474', 474)">
-            AsString(str)
+          <code onmouseout="hideTip(event, '481', 481)" onmouseover="showTip(event, '481', 481)">
+            TextConversions.AsString(str)
           </code>
-          <div class="tip" id="474">
+          <div class="tip" id="481">
             <strong>Signature:</strong> str:string -&gt; string option<br />
                                   </div>
         </td>
         <td class="xmldoc">
-                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L55-55" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L62-62" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -207,15 +225,33 @@ along the lines of <code>2013-01-28T00:37Z</code></p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '475', 475)" onmouseover="showTip(event, '475', 475)">
-            DefaultCurrencyAdorners
+          <code onmouseout="hideTip(event, '482', 482)" onmouseover="showTip(event, '482', 482)">
+            TextConversions.AsTimeSpan(...)
           </code>
-          <div class="tip" id="475">
+          <div class="tip" id="482">
+            <strong>Signature:</strong> cultureInfo:CultureInfo -&gt; text:string -&gt; TimeSpan option<br />
+                                  </div>
+        </td>
+        <td class="xmldoc">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L136-136" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '483', 483)" onmouseover="showTip(event, '483', 483)">
+            TextConversions.DefaultCurrencyAdorners
+          </code>
+          <div class="tip" id="483">
             <strong>Signature:</strong> Set&lt;char&gt;<br />
                                   </div>
         </td>
         <td class="xmldoc">
-                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L42-42" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L49-49" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -228,15 +264,15 @@ along the lines of <code>2013-01-28T00:37Z</code></p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '476', 476)" onmouseover="showTip(event, '476', 476)">
-            DefaultMissingValues
+          <code onmouseout="hideTip(event, '484', 484)" onmouseover="showTip(event, '484', 484)">
+            TextConversions.DefaultMissingValues
           </code>
-          <div class="tip" id="476">
+          <div class="tip" id="484">
             <strong>Signature:</strong> string []<br />
                                   </div>
         </td>
         <td class="xmldoc">
-                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L36-36" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L43-43" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -249,15 +285,15 @@ along the lines of <code>2013-01-28T00:37Z</code></p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '477', 477)" onmouseover="showTip(event, '477', 477)">
-            DefaultNonCurrencyAdorners
+          <code onmouseout="hideTip(event, '485', 485)" onmouseover="showTip(event, '485', 485)">
+            TextConversions.DefaultNonCurrencyAdorners(...)
           </code>
-          <div class="tip" id="477">
+          <div class="tip" id="485">
             <strong>Signature:</strong> Set&lt;char&gt;<br />
                                   </div>
         </td>
         <td class="xmldoc">
-                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L39-39" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/CommonRuntime/TextConversions.fs#L46-46" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>

@@ -87,6 +87,13 @@ converted to an integer; <code>value.AsInteger64()</code>, <code>value.AsDecimal
 <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format, or using the
 <code>\/Date(...)\/</code> JSON format containing number of milliseconds since 1/1/1970.
 </li>
+<li>
+<code>value.AsDateTimeOffset()</code> parses the string as a <code>DateTimeOffset</code> value using either the
+<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format, or using the
+<code>\/Date(...[+/-]offset)\/</code> JSON format containing number of milliseconds since 1/1/1970,
+[+/-] the 4 digit offset. Example- <code>\/Date(1231456+1000)\/</code>.
+</li>
+<li><code>value.AsTimeSpan()</code> parses the string as a <code>TimeSpan</code> value.</li>
 <li><code>value.AsGuid()</code> parses the string as a <code>Guid</code> value.</li>
 <li>
 <code>value?child</code> uses the dynamic operator to obtain a record member named <code>child</code>;
@@ -224,7 +231,10 @@ against the <code>JsonValue.Array</code> constructor:</p>
 <p>The <code>value</code> property of a data point is not always available - as demonstrated
 above, the value may be <code>null</code>. In that case, we want to skip the data point.
 To check whether the property is <code>null</code> we simply compare it with <code>JsonValue.Null</code>.</p>
-<p>Also note that the <code>date</code> and <code>value</code> properties are formatted as strings
+<p>The <code>date</code> values will be parsed as <code>DateTimeOffset</code> if there is an offset present.
+However, for a mixed collection of <code>DateTime</code> (that is, without the offset) and
+<code>DateTimeOffset</code> values, the type of the collection will be collection of <code>DateTime</code>
+after parsing. Also note that the <code>date</code> and <code>value</code> properties are formatted as strings
 in the source file (e.g. <code>"1990"</code>) instead of numbers (e.g. <code>1990</code>). When you try
 accessing the value as an integer or float, the <code>JsonValue</code> automatically parses
 the string into the desired format. In general, the API attempts to be as tolerant
@@ -248,7 +258,7 @@ can be used to easily access data from the WorldBank
 <div class="tip" id="fs3">val info : JsonValue</div>
 <div class="tip" id="fs4">Multiple items<br />module JsonValue<br /><br />--------------------<br />type JsonValue =<br />&#160;&#160;| String of string<br />&#160;&#160;| Number of decimal<br />&#160;&#160;| Float of float<br />&#160;&#160;| Record of properties: (string * JsonValue) []<br />&#160;&#160;| Array of elements: JsonValue []<br />&#160;&#160;| Boolean of bool<br />&#160;&#160;| Null<br />&#160;&#160;&#160;&#160;member private PrepareRequest : httpMethod:string option * headers:#seq&lt;string * string&gt; option -&gt; HttpRequestBody * (string * string) list * string<br />&#160;&#160;&#160;&#160;member Request : url:string * ?httpMethod:string * ?headers:seq&lt;string * string&gt; -&gt; HttpResponse<br />&#160;&#160;&#160;&#160;member RequestAsync : url:string * ?httpMethod:string * ?headers:seq&lt;string * string&gt; -&gt; Async&lt;HttpResponse&gt;<br />&#160;&#160;&#160;&#160;override ToString : unit -&gt; string<br />&#160;&#160;&#160;&#160;member ToString : saveOptions:JsonSaveOptions -&gt; string<br />&#160;&#160;&#160;&#160;member WriteTo : w:TextWriter * saveOptions:JsonSaveOptions -&gt; unit<br />&#160;&#160;&#160;&#160;static member AsyncLoad : uri:string * ?encoding:Encoding -&gt; Async&lt;JsonValue&gt;<br />&#160;&#160;&#160;&#160;static member private JsonStringEncodeTo : w:TextWriter -&gt; value:string -&gt; unit<br />&#160;&#160;&#160;&#160;static member Load : reader:TextReader -&gt; JsonValue<br />&#160;&#160;&#160;&#160;static member Load : stream:Stream -&gt; JsonValue<br />&#160;&#160;&#160;&#160;...</div>
 <div class="tip" id="fs5">static member JsonValue.Parse : text:string -&gt; JsonValue</div>
-<div class="tip" id="fs6">Multiple items<br />module JsonExtensions<br /><br />from FSharp.Data<br /><br />--------------------<br />type JsonExtensions =<br />&#160;&#160;static member AsArray : x:JsonValue -&gt; JsonValue []<br />&#160;&#160;static member AsBoolean : x:JsonValue -&gt; bool<br />&#160;&#160;static member AsDateTime : x:JsonValue * ?cultureInfo:CultureInfo -&gt; DateTime<br />&#160;&#160;static member AsDecimal : x:JsonValue * ?cultureInfo:CultureInfo -&gt; decimal<br />&#160;&#160;static member AsFloat : x:JsonValue * ?cultureInfo:CultureInfo * ?missingValues:string [] -&gt; float<br />&#160;&#160;static member AsGuid : x:JsonValue -&gt; Guid<br />&#160;&#160;static member AsInteger : x:JsonValue * ?cultureInfo:CultureInfo -&gt; int<br />&#160;&#160;static member AsInteger64 : x:JsonValue * ?cultureInfo:CultureInfo -&gt; int64<br />&#160;&#160;static member AsString : x:JsonValue * ?cultureInfo:CultureInfo -&gt; string<br />&#160;&#160;static member GetEnumerator : x:JsonValue -&gt; IEnumerator<br />&#160;&#160;...</div>
+<div class="tip" id="fs6">Multiple items<br />module JsonExtensions<br /><br />from FSharp.Data<br /><br />--------------------<br />type JsonExtensions =<br />&#160;&#160;static member AsArray : x:JsonValue -&gt; JsonValue []<br />&#160;&#160;static member AsBoolean : x:JsonValue -&gt; bool<br />&#160;&#160;static member AsDateTime : x:JsonValue * ?cultureInfo:CultureInfo -&gt; DateTime<br />&#160;&#160;static member AsDateTimeOffset : x:JsonValue * ?cultureInfo:CultureInfo -&gt; DateTimeOffset<br />&#160;&#160;static member AsDecimal : x:JsonValue * ?cultureInfo:CultureInfo -&gt; decimal<br />&#160;&#160;static member AsFloat : x:JsonValue * ?cultureInfo:CultureInfo * ?missingValues:string [] -&gt; float<br />&#160;&#160;static member AsGuid : x:JsonValue -&gt; Guid<br />&#160;&#160;static member AsInteger : x:JsonValue * ?cultureInfo:CultureInfo -&gt; int<br />&#160;&#160;static member AsInteger64 : x:JsonValue * ?cultureInfo:CultureInfo -&gt; int64<br />&#160;&#160;static member AsString : x:JsonValue * ?cultureInfo:CultureInfo -&gt; string<br />&#160;&#160;...</div>
 <div class="tip" id="fs7">val n : JsonValue</div>
 <div class="tip" id="fs8">val printfn : format:Printf.TextWriterFormat&lt;&#39;T&gt; -&gt; &#39;T</div>
 <div class="tip" id="fs9">val sib : JsonValue</div>

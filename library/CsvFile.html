@@ -97,6 +97,13 @@ converted to an integer; <code>value.AsInteger64()</code>, <code>value.AsDecimal
 <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format, or using the
 <code>\/Date(...)\/</code> JSON format containing number of milliseconds since 1/1/1970.
 </li>
+<li>
+<code>value.AsDateTimeOffset()</code> parses the string as a <code>DateTimeOffset</code> value using either the
+<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format, or using the
+<code>\/Date(...[+/-]offset)\/</code> JSON format containing number of milliseconds since 1/1/1970,
+[+/-] the 4 digit offset. Example- <code>\/Date(1231456+1000)\/</code>.
+</li>
+<li><code>value.AsTimeSpan()</code> parses the string as a <code>TimeSpan</code> value.</li>
 <li><code>value.AsGuid()</code> returns the value as a <code>Guid</code> value.</li>
 </ul>
 <p>Methods that may need to parse a numeric value or date (such as <code>AsFloat</code> and

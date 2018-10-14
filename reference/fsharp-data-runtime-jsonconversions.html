@@ -43,7 +43,7 @@
     <span>Namespace: FSharp.Data.Runtime</span><br />
     </p>
 <div class="xmldoc">
-<p>Conversions from JsonValue to string/int/int64/decimal/float/boolean/datetime/guid options</p>
+<p>Conversions from JsonValue to string/int/int64/decimal/float/boolean/datetime/datetimeoffset/timespan/guid options</p>
 
 </div>
   <h3>Static members</h3>
@@ -55,15 +55,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '519', 519)" onmouseover="showTip(event, '519', 519)">
-            AsBoolean
+          <code onmouseout="hideTip(event, '528', 528)" onmouseover="showTip(event, '528', 528)">
+            JsonConversions.AsBoolean
           </code>
-          <div class="tip" id="519">
+          <div class="tip" id="528">
             <strong>Signature:</strong> JsonValue -&gt; bool option<br />
                                   </div>
         </td>
         <td class="xmldoc">
-                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/Json/JsonConversions.fs#L47-47" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/Json/JsonConversions.fs#L51-51" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -74,15 +74,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '520', 520)" onmouseover="showTip(event, '520', 520)">
-            AsDateTime(cultureInfo)
+          <code onmouseout="hideTip(event, '529', 529)" onmouseover="showTip(event, '529', 529)">
+            JsonConversions.AsDateTime(cultureInfo)
           </code>
-          <div class="tip" id="520">
+          <div class="tip" id="529">
             <strong>Signature:</strong> cultureInfo:IFormatProvider -&gt; JsonValue -&gt; DateTime option<br />
                                   </div>
         </td>
         <td class="xmldoc">
-                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/Json/JsonConversions.fs#L54-54" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/Json/JsonConversions.fs#L62-62" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -92,51 +92,69 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '521', 521)" onmouseover="showTip(event, '521', 521)">
-            AsDecimal(cultureInfo)
+          <code onmouseout="hideTip(event, '530', 530)" onmouseover="showTip(event, '530', 530)">
+            JsonConversions.AsDateTimeOffset(...)
           </code>
-          <div class="tip" id="521">
-            <strong>Signature:</strong> cultureInfo:IFormatProvider -&gt; JsonValue -&gt; decimal option<br />
-                                  </div>
-        </td>
-        <td class="xmldoc">
-                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/Json/JsonConversions.fs#L36-36" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '522', 522)" onmouseover="showTip(event, '522', 522)">
-            AsFloat(...)
-          </code>
-          <div class="tip" id="522">
-            <strong>Signature:</strong> (missingValues:string []) -&gt; useNoneForMissingValues:bool -&gt; cultureInfo:IFormatProvider -&gt; JsonValue -&gt; float option<br />
-                                  </div>
-        </td>
-        <td class="xmldoc">
-                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/Json/JsonConversions.fs#L41-41" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '523', 523)" onmouseover="showTip(event, '523', 523)">
-            AsGuid
-          </code>
-          <div class="tip" id="523">
-            <strong>Signature:</strong> JsonValue -&gt; Guid option<br />
+          <div class="tip" id="530">
+            <strong>Signature:</strong> cultureInfo:IFormatProvider -&gt; JsonValue -&gt; DateTimeOffset option<br />
                                   </div>
         </td>
         <td class="xmldoc">
                       <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/Json/JsonConversions.fs#L58-58" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '531', 531)" onmouseover="showTip(event, '531', 531)">
+            JsonConversions.AsDecimal(cultureInfo)
+          </code>
+          <div class="tip" id="531">
+            <strong>Signature:</strong> cultureInfo:IFormatProvider -&gt; JsonValue -&gt; decimal option<br />
+                                  </div>
+        </td>
+        <td class="xmldoc">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/Json/JsonConversions.fs#L40-40" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '532', 532)" onmouseover="showTip(event, '532', 532)">
+            JsonConversions.AsFloat(...)
+          </code>
+          <div class="tip" id="532">
+            <strong>Signature:</strong> (missingValues:string []) -&gt; useNoneForMissingValues:bool -&gt; cultureInfo:IFormatProvider -&gt; JsonValue -&gt; float option<br />
+                                  </div>
+        </td>
+        <td class="xmldoc">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/Json/JsonConversions.fs#L45-45" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '533', 533)" onmouseover="showTip(event, '533', 533)">
+            JsonConversions.AsGuid
+          </code>
+          <div class="tip" id="533">
+            <strong>Signature:</strong> JsonValue -&gt; Guid option<br />
+                                  </div>
+        </td>
+        <td class="xmldoc">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/Json/JsonConversions.fs#L70-70" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -147,15 +165,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '524', 524)" onmouseover="showTip(event, '524', 524)">
-            AsInteger(cultureInfo)
+          <code onmouseout="hideTip(event, '534', 534)" onmouseover="showTip(event, '534', 534)">
+            JsonConversions.AsInteger(cultureInfo)
           </code>
-          <div class="tip" id="524">
+          <div class="tip" id="534">
             <strong>Signature:</strong> cultureInfo:IFormatProvider -&gt; JsonValue -&gt; int option<br />
                                   </div>
         </td>
         <td class="xmldoc">
-                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/Json/JsonConversions.fs#L26-26" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/Json/JsonConversions.fs#L28-28" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -165,15 +183,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '525', 525)" onmouseover="showTip(event, '525', 525)">
-            AsInteger64(cultureInfo)
+          <code onmouseout="hideTip(event, '535', 535)" onmouseover="showTip(event, '535', 535)">
+            JsonConversions.AsInteger64(cultureInfo)
           </code>
-          <div class="tip" id="525">
+          <div class="tip" id="535">
             <strong>Signature:</strong> cultureInfo:IFormatProvider -&gt; JsonValue -&gt; int64 option<br />
                                   </div>
         </td>
         <td class="xmldoc">
-                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/Json/JsonConversions.fs#L31-31" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/Json/JsonConversions.fs#L34-34" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -183,15 +201,33 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '526', 526)" onmouseover="showTip(event, '526', 526)">
-            AsString(...)
+          <code onmouseout="hideTip(event, '536', 536)" onmouseover="showTip(event, '536', 536)">
+            JsonConversions.AsString(...)
           </code>
-          <div class="tip" id="526">
+          <div class="tip" id="536">
             <strong>Signature:</strong> useNoneForNullOrEmpty:bool -&gt; cultureInfo:IFormatProvider -&gt; JsonValue -&gt; string option<br />
                                   </div>
         </td>
         <td class="xmldoc">
-                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/Json/JsonConversions.fs#L18-18" class="github-link">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/Json/JsonConversions.fs#L20-20" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '537', 537)" onmouseover="showTip(event, '537', 537)">
+            JsonConversions.AsTimeSpan(cultureInfo)
+          </code>
+          <div class="tip" id="537">
+            <strong>Signature:</strong> cultureInfo:CultureInfo -&gt; JsonValue -&gt; TimeSpan option<br />
+                                  </div>
+        </td>
+        <td class="xmldoc">
+                      <a href="https://github.com/fsharp/FSharp.Data/tree/master/src/Json/JsonConversions.fs#L66-66" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
