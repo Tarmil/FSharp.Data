@@ -19,6 +19,8 @@
     <Content Include="Data/**/*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Remove="Data\GitHub.json" />
+    <EmbeddedResource Include="Data\GitHub.json" />
     <Compile Include="Http.fs" />
     <Compile Include="MockServer.fs" />
     <Compile Include="HttpIntegrationTests.fs" />

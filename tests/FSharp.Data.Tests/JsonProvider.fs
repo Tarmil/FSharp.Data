@@ -608,7 +608,7 @@ let normalize (str:string) =
   str.Replace("\r\n", "\n")
      .Replace("\r", "\n")
 
-type GitHub = JsonProvider<"Data/GitHub.json", RootName="Issue">
+type GitHub = JsonProvider<"Data/GitHub.json", RootName="Issue", EmbeddedResource="FSharp.Data.Tests, FSharp.Data.Tests.Data.GitHub.json">
 
 [<Test>]
 let ``Can construct complex objects``() =
