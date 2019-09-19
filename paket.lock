@@ -13,12 +13,12 @@ NUGET
     Octokit (0.32)
 GITHUB
   remote: fsharp/FAKE
-    modules/Octokit/Octokit.fsx (36b81bc99da42348451432dbfb2e25f18f1f93e2)
+    modules/Octokit/Octokit.fsx (b1c3ea3f910c325f99f0ca47402eb3afd0081431)
       Octokit (>= 0.20)
   remote: fsprojects/FSharp.TypeProviders.SDK
-    src/ProvidedTypes.fs (592d23a96db79b4248ed23a062db3a17433282ce)
-    src/ProvidedTypes.fsi (592d23a96db79b4248ed23a062db3a17433282ce)
-    src/ProvidedTypesTesting.fs (592d23a96db79b4248ed23a062db3a17433282ce)
+    src/ProvidedTypes.fs (b8727a47dd83d3e88aed8f2100f6712478c64632)
+    src/ProvidedTypes.fsi (b8727a47dd83d3e88aed8f2100f6712478c64632)
+    src/ProvidedTypesTesting.fs (b8727a47dd83d3e88aed8f2100f6712478c64632)
 GROUP fs31
 RESTRICTION: || (== net461) (== netcoreapp2.0)
 NUGET
